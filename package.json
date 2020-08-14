@@ -1,0 +1,23 @@
+{
+  "name": "storywinds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "webpack --mode=development",
+    "start": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "css-loader": "^4.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.2.1",
+    "tailwindcss": "^1.6.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
+}
