@@ -1,0 +1,78 @@
+.btn {
+  @apply text-black font-semibold leading-6 border-2 border-solid border-transparent rounded-full transition-colors duration-150;
+  padding: calc(0.5rem - 2px) calc(2rem - 2px);
+
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+/* Colors */
+.btn-primary {
+  @apply bg-yellow-300;
+
+  &:hover,
+  &:focus {
+    @apply bg-yellow-400;
+  }
+}
+
+.btn-secondary {
+  @apply bg-black text-white;
+
+  &:hover,
+  &:focus {
+    @apply bg-gray-900;
+  }
+}
+
+.btn-light {
+  @apply bg-white text-black;
+
+  &:hover,
+  &:focus {
+    @apply bg-gray-200;
+  }
+}
+
+/* Outline Variant */
+.btn-outline-primary {
+  @apply text-yellow-300 border-yellow-300;
+
+  &:hover,
+  &:focus {
+    @apply text-black bg-yellow-300;
+  }
+}
+
+.btn-outline-secondary {
+  @apply text-black border-black;
+
+  &:hover,
+  &:focus {
+    @apply text-white bg-black;
+  }
+}
+
+.btn-outline-light {
+  @apply text-white border-white;
+
+  &:hover,
+  &:focus {
+    @apply text-black bg-white;
+  }
+}
+
+/* Squared Variant */
+.btn-squared {
+  @apply rounded;
+}
+
+/* Sizes */
+.btn-sm {
+  @apply text-sm leading-4;
+}
+
+.btn-lg {
+  padding: calc(0.75rem - 2px) calc(4rem - 2px);
+}
