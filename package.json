@@ -2,6 +2,19 @@
   "name": "storywinds",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build:tailwind": "postcss src/tailwind.pcss -o src/tailwind.output.css",
+    "prestart": "npm run build:tailwind",
+    "prebuild": "npm run build:tailwind",
+    "prestorybook": "npm run build:tailwind",
+    "prebuild-storybook": "npm run build:tailwind",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -17,14 +30,16 @@
     "react-scripts": "3.4.3",
     "tailwindcss": "^1.6.2"
   },
-  "scripts": {
-    "build:tailwind": "postcss src/tailwind.pcss -o src/tailwind.output.css",
-    "prestart": "npm run build:tailwind",
-    "prebuild": "npm run build:tailwind",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@storybook/addon-actions": "^6.0.12",
+    "@storybook/addon-essentials": "^6.0.12",
+    "@storybook/addon-links": "^6.0.12",
+    "@storybook/node-logger": "^6.0.12",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.12",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
   },
   "eslintConfig": {
     "extends": "react-app"
